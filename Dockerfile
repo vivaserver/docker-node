@@ -7,6 +7,7 @@ RUN rm -rf /var/cache/apk/*
 RUN npm install -g browserify
 RUN npm install -g bower
 RUN npm install -g less
+RUN npm install -g less-plugin-clean-css
 
 WORKDIR /opt
 
