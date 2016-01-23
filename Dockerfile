@@ -1,7 +1,7 @@
 FROM gliderlabs/alpine:3.2
 MAINTAINER cristian.arroyo@vivaserver.com
 
-RUN apk add --update nodejs
+RUN apk add --update nodejs git
 RUN rm -rf /var/cache/apk/*
 
 RUN npm install -g browserify
