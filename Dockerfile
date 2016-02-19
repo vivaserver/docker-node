@@ -13,6 +13,7 @@ RUN npm install -g browserify
 RUN npm install -g bower
 RUN npm install -g less
 RUN npm install -g less-plugin-clean-css
+RUN npm install -g jshint
 
 WORKDIR /opt
 
