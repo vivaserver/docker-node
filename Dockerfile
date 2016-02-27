@@ -1,7 +1,7 @@
-FROM gliderlabs/alpine:3.2
+FROM gliderlabs/alpine:3.3
 MAINTAINER cristian.arroyo@vivaserver.com
 
-# provides node 0.12.9, npm 2.14.9
+# provides node 4.3.0, npm 2.14.12
 RUN apk add --update nodejs git
 RUN rm -rf /var/cache/apk/*
 
