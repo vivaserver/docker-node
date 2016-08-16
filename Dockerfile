@@ -2,7 +2,7 @@ FROM gliderlabs/alpine:3.3
 MAINTAINER cristian.arroyo@vivaserver.com
 
 # provides node 4.3.0, npm 2.14.12
-RUN apk add --update nodejs rsync
+RUN apk add --update git nodejs rsync
 RUN rm -rf /var/cache/apk/*
 
 # Disabling npm's progress bar yields a 2x npm install speed improvement
