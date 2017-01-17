@@ -1,7 +1,10 @@
-FROM gliderlabs/alpine:3.3
+# Build a "dev/node" image from this Dockerfile using:
+#   $ docker build . -t dev/node
+
+FROM gliderlabs/alpine:3.4
 MAINTAINER cristian.arroyo@vivaserver.com
 
-# provides node 4.3.0, npm 2.14.12
+# provides node 6.7.0, npm 3.10.3
 RUN apk add --update git nodejs rsync
 RUN rm -rf /var/cache/apk/*
 
@@ -9,6 +12,7 @@ RUN rm -rf /var/cache/apk/*
 # https://twitter.com/gavinjoyce/status/691773956144119808
 RUN npm set progress=false
 
+# install some base packages
 RUN npm install -g browserify
 RUN npm install -g less
 RUN npm install -g less-plugin-clean-css
