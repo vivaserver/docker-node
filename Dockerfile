@@ -14,11 +14,11 @@ RUN npm set progress=false
 
 # install some base packages
 RUN npm install -g browserify
-RUN npm install -g less
-RUN npm install -g less-plugin-clean-css
-RUN npm install -g jshint
-RUN npm install -g minifyify
-RUN npm install -g uglifyify
+# RUN npm install -g less
+# RUN npm install -g less-plugin-clean-css
+# RUN npm install -g jshint
+# RUN npm install -g minifyify
+# RUN npm install -g uglifyify
 
 WORKDIR /opt
 
