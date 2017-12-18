@@ -4,11 +4,12 @@ This Dockerfile creates a stock Node.js server using the minimal Alpine Linux im
 
 ## Usage
 
-Both node 0.12.9 and node 4.3.0 are available switching the Alpine image being used (tagged on the repository):
+Both multiple Node versions are available switching the Alpine image being used (tagged on the repository):
 
     $ git tag -ln
     0.12            provides node 0.12.9, npm 2.14.9
     4.3             provides node 4.3.0, npm 2.14.12
+    6.7             provides node 6.7.0, npm 3.10.3
 
 Then:
 
