@@ -1,11 +1,11 @@
 # Build a "dev/node" image from this Dockerfile using:
 #   $ docker build . -t dev/node
 
-FROM gliderlabs/alpine:3.4
+FROM gliderlabs/alpine:3.6
 MAINTAINER cristian.arroyo@vivaserver.com
 
-# provides node 6.7.0, npm 3.10.3
-RUN apk add --update git nodejs rsync
+# provides node 6.10.3, npm 3.10.10
+RUN apk add --update git nodejs nodejs-npm rsync
 RUN rm -rf /var/cache/apk/*
 
 # Disabling npm's progress bar yields a 2x npm install speed improvement
