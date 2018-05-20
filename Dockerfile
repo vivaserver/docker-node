@@ -5,8 +5,7 @@ FROM gliderlabs/alpine:3.6
 MAINTAINER cristian.arroyo@vivaserver.com
 
 # provides node 6.10.3, npm 3.10.10
-RUN apk add --update git nodejs nodejs-npm rsync
-RUN rm -rf /var/cache/apk/*
+RUN apk add --update git nodejs nodejs-npm rsync && rm -rf /var/cache/apk/*
 
 # Disabling npm's progress bar yields a 2x npm install speed improvement
 # https://twitter.com/gavinjoyce/status/691773956144119808
