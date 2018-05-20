@@ -21,6 +21,7 @@ RUN npm install -g browserify
 
 # run app as node user, not root
 RUN adduser -s /bin/sh -u 1001 -G root -h /opt -S -D node && chown -R node /opt
+USER node
 WORKDIR /opt
 
 EXPOSE 5000
