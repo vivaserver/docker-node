@@ -19,6 +19,8 @@ RUN npm install -g browserify
 # RUN npm install -g minifyify
 # RUN npm install -g uglifyify
 
+# run app as node user, not root
+RUN adduser -s /bin/sh -u 1001 -G root -h /opt -S -D node && chown -R node /opt
 WORKDIR /opt
 
 EXPOSE 5000
