@@ -1,5 +1,5 @@
-# Build a "dev/node" image from this Dockerfile using:
-#   $ docker build . -t dev/node
+# Build a "slim/node" image from this Dockerfile using:
+#   $ docker build . -t slim/node
 
 FROM node:8-slim
 MAINTAINER cristian.arroyo@vivaserver.com
