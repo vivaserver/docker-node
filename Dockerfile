@@ -1,23 +1,12 @@
 # Build a "dev/node" image from this Dockerfile using:
 #   $ docker build . -t dev/node
 
-FROM gliderlabs/alpine:3.6
+FROM node:8-slim
 MAINTAINER cristian.arroyo@vivaserver.com
 
-# provides node 6.10.3, npm 3.10.10
-RUN apk add --update git nodejs nodejs-npm rsync && rm -rf /var/cache/apk/*
-
-# Disabling npm's progress bar yields a 2x npm install speed improvement
-# https://twitter.com/gavinjoyce/status/691773956144119808
-RUN npm set progress=false
-
-# install some base packages
-RUN npm install -g browserify
-# RUN npm install -g less
-# RUN npm install -g less-plugin-clean-css
-# RUN npm install -g jshint
-# RUN npm install -g minifyify
-# RUN npm install -g uglifyify
+# provides node 8.9.3, npm 5.5.1
+# RUN apk add --update git gcc python make nodejs nodejs-npm rsync && rm -rf /var/cache/apk/*
+RUN apt-get -qq update && apt-get -qq install nodejs rsync && apt-get -qq clean && rm -f /var/lib/apt/lists/*_*
 
 # run app as node user, not root
 RUN adduser -s /bin/sh -u 1001 -G root -h /opt -S -D node && chown -R node /opt
